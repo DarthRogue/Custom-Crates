@@ -50,10 +50,24 @@ _loot_Misc = ["PaintCanClear","PaintCanBlk","PaintCanBlu","PaintCanBrn","PaintCa
 _loot_build = ["MortarBucket","MortarBucket","ItemCorrugated","ItemCorrugatedLg","CinderBlocks","VehicleRepairLg","VehicleRepair","CircuitParts","ItemScraps","KitShelf","KitWoodFloor","KitWoodStairs"];
 
 
+//Make sure the right ammo is given with the weapons
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+_pistol = _loot_pistols select 0;
+_pmag = _loot_pistols select 1;		  
+		  
+_rifle = _loot_rifles select 0;
+_rmag = _loot_rifles select 1;
+
+_lmg = _loot_lmgs select 0;
+_lmag = _loot_lmgs select 1;
+
+_sniper = _loot_snipers select 0;
+_smag = _loot_snipers select 1;
+		  
 
 
-
-
+//Build the crates
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 _crate_1 = objNull;
  
 if (true) then
@@ -113,18 +127,7 @@ if (true) then
  clearBackpackCargoGlobal _this;
  clearItemCargoGlobal _this;
 
- _pistol = _loot_pistols select 0;
- _pmag = _loot_pistols select 1;		  
-		  
- _rifle = _loot_rifles select 0;
- _rmag = _loot_rifles select 1;
-
- _lmg = _loot_lmgs select 0;
- _lmag = _loot_lmgs select 1;
-
- _sniper = _loot_snipers select 0;
- _smag = _loot_snipers select 1;
-		  
+ 
  _this addWeaponCargoGlobal [_rifle,1];
  _this addMagazineCargoGlobal [_rmag, (3 + floor(random 3))];
  _this addWeaponCargoGlobal [_pistol,1];
@@ -234,7 +237,28 @@ if (true) then
  clearBackpackCargoGlobal _this;
  clearItemCargoGlobal _this;
  
- 
+ _this addWeaponCargoGlobal [_rifle,1];
+ _this addMagazineCargoGlobal [_rmag, (3 + floor(random 3))];
+ _this addWeaponCargoGlobal [_pistol,1];
+ _this addMagazineCargoGlobal [_pmag, (3 + floor(random 3))];
+ _this addWeaponCargoGlobal [_lmg,1];
+ _this addMagazineCargoGlobal [_lmag, (1 + floor(random 3))];
+ _this addWeaponCargoGlobal [_sniper,1];
+ _this addMagazineCargoGlobal [_smag, (3 + floor(random 3))];
+ _this addWeaponCargoGlobal [_rifle,1];
+ _this addMagazineCargoGlobal [_rmag, (3 + floor(random 3))];
+ _this addWeaponCargoGlobal [_pistol,1];
+ _this addMagazineCargoGlobal [_pmag, (3 + floor(random 3))];
+ _this addWeaponCargoGlobal [_lmg,1];
+ _this addMagazineCargoGlobal [_lmag, (1 + floor(random 3))];
+ _this addWeaponCargoGlobal [_sniper,1];
+ _this addMagazineCargoGlobal [_smag, (3 + floor(random 3))];
+ _this addWeaponCargoGlobal [_rifle,1];
+ _this addMagazineCargoGlobal [_rmag, (3 + floor(random 3))];
+ _this addWeaponCargoGlobal [_pistol,1];
+ _this addMagazineCargoGlobal [_pmag, (3 + floor(random 3))];
+ _this addWeaponCargoGlobal [_lmg,1];
+ _this addMagazineCargoGlobal [_lmag, (1 + floor(random 3))];
  _this addItemCargoGlobal [(_loot_uniforms call BIS_fnc_selectRandom),(1 + floor(random 1))];
  _this addItemCargoGlobal [(_loot_uniforms call BIS_fnc_selectRandom),(1 + floor(random 1))];
  _this addItemCargoGlobal [(_loot_uniforms call BIS_fnc_selectRandom),(1 + floor(random 1))];
