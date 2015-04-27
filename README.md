@@ -5,6 +5,8 @@ Custom Loot Crate Spawning
 
 //HUGE thanks to deadeye & Robio for helping work out the last bugs!
 
+//Modified by Ghostrider-DBD- for better random loot distribution and adding vehicle crashes
+
 //To be ran server side via addon PBO
 
 I've come up with a way to have a random and dynamic loot crate spawn system that is fully customizable.  You can change the number of crates, their position on the map, what type of crate is used, what loot goes in each crate and how much of it, and add or remove loot items as needed.  You can also specify a static amount of any given item, such as explosives, to prevent large random amounts of them from spawning in.
