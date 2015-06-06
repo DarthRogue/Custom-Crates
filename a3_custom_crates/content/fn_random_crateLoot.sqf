@@ -25,18 +25,40 @@ _smokeNearCrate = false;  //turns on or off wrecks near crates  Recommended to t
 switch (_worldName) do {
 	case "altis":{
 		diag_log "Altis-specific settings loaded";
+		_lootBoxes = [  // format as [_position, _lootType (range 1-4)] or [_position, 0] for randomly selected loot.
 			[[3748,11660,0],0],
 			[[3924,11493,0],0],
 			[[3681,11530,0],0],
 			[[3816,11774,0],0]
+			];
 	}; 
 	case "stratis":{
+		diag_log "Stratis-specific settings loaded";
+		_lootBoxes = [  // format as [_position, _lootType (range 1-4)] or [_position, 0] for randomly selected loot.
+			[[0,0,0],0],
+			[[0,0,0],0],
+			[[0,0,0],0],
+			[[0,0,0],0]
+		];
 		
 	}; 
 	case "chernarus":{
 		diag_log "Chernarus-specific settings loaded";
+		_lootBoxes = [  // format as [_position, _lootType (range 1-4)] or [_position, 0] for randomly selected loot.
+			[[0,0,0],0],
+			[[0,0,0],0],
+			[[0,0,0],0],
+			[[0,0,0],0]
+		];
 	};
 	case "chernarus_summer":{
+		diag_log "Chernarus Summer-specific settings loaded";
+		_lootBoxes = [  // format as [_position, _lootType (range 1-4)] or [_position, 0] for randomly selected loot.
+			[[0,0,0],0],
+			[[0,0,0],0],
+			[[0,0,0],0],
+			[[0,0,0],0]
+		];
 	}; 
 	case "bornholm":{
 		// Setup for Bornholm AI controlled sector		
@@ -51,6 +73,13 @@ switch (_worldName) do {
 			]; 
 	};
 	case "tavi":{
+		diag_log "Taviana-specific settings loaded";
+		_lootBoxes = [  // format as [_position, _lootType (range 1-4)] or [_position, 0] for randomly selected loot.
+			[[0,0,0],0],
+			[[0,0,0],0],
+			[[0,0,0],0],
+			[[0,0,0],0]
+		];
 	};
 };
 diag_log format["[crateLoot.sqf] --- >>> worldname is %1",_worldName]; 
